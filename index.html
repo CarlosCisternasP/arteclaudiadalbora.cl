@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería D'Albora | Impresionismo & Paisajes</title>
+    <title>Galería Arte Claudia D'Albora | Impresionismo & Paisajes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -17,12 +17,6 @@
             --card-bg: #FFFFFF;
             --gradient-primary: linear-gradient(135deg, var(--dark-gray) 0%, var(--black) 100%);
             --gradient-light: linear-gradient(135deg, var(--medium-gray) 0%, var(--light) 100%);
-            --gradient-side: linear-gradient(180deg, 
-                rgba(255, 107, 107, 0.15) 0%, 
-                rgba(255, 193, 106, 0.1) 25%, 
-                rgba(255, 255, 106, 0.08) 50%, 
-                rgba(106, 255, 193, 0.1) 75%, 
-                rgba(106, 193, 255, 0.15) 100%);
             --transition: all 0.3s ease;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -35,138 +29,23 @@
             color: var(--dark-gray);
             line-height: 1.7;
             overflow-x: hidden;
-            position: relative;
         }
-        
-        /* Efectos de bordes laterales con colores vibrantes */
-        .side-effects {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            width: 150px;
-            pointer-events: none;
-            z-index: -1;
-        }
-        .side-effects.left {
-            left: 0;
-            background: linear-gradient(90deg, 
-                rgba(255, 107, 107, 0.08) 0%, 
-                transparent 100%);
-        }
-        .side-effects.right {
-            right: 0;
-            background: linear-gradient(270deg, 
-                rgba(106, 193, 255, 0.08) 0%, 
-                transparent 100%);
-        }
-        
-        /* Líneas decorativas con colores */
-        .color-line {
-            position: fixed;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, 
-                #FF6B6B, #FFC16A, #FFFF6A, #6AFFC1, #6AC1FF, transparent);
-            z-index: -1;
-            opacity: 0.3;
-            filter: blur(0.5px);
-        }
-        .color-line.top {
-            top: 100px;
-            left: 5%;
-            right: 5%;
-        }
-        .color-line.bottom {
-            bottom: 100px;
-            left: 5%;
-            right: 5%;
-        }
-        
-        /* Puntos flotantes decorativos */
-        .floating-dots {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: -1;
-        }
-        .floating-dots span {
-            position: absolute;
-            display: block;
-            width: 3px;
-            height: 3px;
-            border-radius: 50%;
-            background: #FF6B6B;
-            opacity: 0.3;
-            animation: float 15s linear infinite;
-        }
-        .floating-dots span:nth-child(2n) {
-            background: #6AC1FF;
-        }
-        .floating-dots span:nth-child(3n) {
-            background: #6AFFC1;
-        }
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.3;
-            }
-            90% {
-                opacity: 0.3;
-            }
-            100% {
-                transform: translateY(-100px) translateX(100px);
-                opacity: 0;
-            }
-        }
-        
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
-        .container { 
-            width: 90%; 
-            max-width: 1200px; 
-            margin: 0 auto;
-            position: relative;
-        }
-        .section { 
-            padding: 5rem 0;
-            position: relative;
-        }
-        
-        /* Efecto de borde en secciones con colores */
-        .section::before {
-            content: '';
-            position: absolute;
-            left: 10%;
-            right: 10%;
-            top: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, 
-                rgba(255, 107, 107, 0.3), 
-                rgba(106, 193, 255, 0.3), 
-                transparent);
-            opacity: 0.5;
-        }
-        
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .section { padding: 5rem 0; }
         .section-title {
             font-size: 2.8rem;
             margin-bottom: 1rem;
             color: var(--black);
             text-align: center;
             position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
         }
         .section-title:after {
             content: '';
             display: block;
             width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
+            background: var(--gradient-primary);
             margin: 1rem auto 2rem;
         }
         .section-subtitle {
@@ -188,21 +67,6 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-        }
-        .btn:hover::before {
-            left: 100%;
         }
         .btn-primary {
             background: var(--gradient-primary);
@@ -211,7 +75,7 @@
         }
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow-lg);
         }
         .btn-outline {
             background: transparent;
@@ -233,7 +97,6 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.08);
             padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
         }
         .navbar {
             display: flex;
@@ -249,29 +112,8 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            position: relative;
-            padding: 0.5rem 0;
         }
-        .logo::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
-            transition: width 0.3s ease;
-        }
-        .logo:hover::after {
-            width: 100%;
-        }
-        .logo span { 
-            color: var(--dark-gray); 
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+        .logo span { color: var(--dark-gray); }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
         .nav-links a {
             color: var(--dark-gray);
@@ -286,7 +128,7 @@
             position: absolute;
             bottom: 0; left: 0;
             width: 0; height: 2px;
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
+            background: var(--black);
             transition: width 0.3s ease;
         }
         .nav-links a:hover:after, .nav-links a.active:after { width: 100%; }
@@ -300,25 +142,11 @@
             position: relative;
             overflow: hidden;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at center, 
-                rgba(255, 107, 107, 0.05) 0%, 
-                rgba(106, 193, 255, 0.05) 50%, 
-                transparent 70%);
-            pointer-events: none;
-        }
         .hero h1 {
             font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             color: var(--black);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .hero p {
             font-size: 1.3rem;
@@ -336,23 +164,6 @@
         .stat-box {
             text-align: center;
             padding: 1.5rem;
-            position: relative;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: var(--border-radius);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-        .stat-box::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #FF6B6B, #6AC1FF, #6AFFC1);
-            border-radius: calc(var(--border-radius) + 2px);
-            z-index: -1;
-            opacity: 0.5;
         }
         .stat-box .number {
             display: block;
@@ -385,28 +196,11 @@
             color: var(--dark-gray);
             cursor: pointer;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        .filter-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 50px;
-            background: linear-gradient(45deg, #FF6B6B, #6AC1FF);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-        .filter-btn:hover::before, .filter-btn.active::before {
-            opacity: 1;
         }
         .filter-btn:hover, .filter-btn.active {
+            background: var(--black);
             color: white;
-            border-color: transparent;
+            border-color: var(--black);
         }
         .gallery-grid {
             display: grid;
@@ -421,33 +215,10 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             cursor: pointer;
-            position: relative;
-        }
-        .gallery-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px solid transparent;
-            border-radius: var(--border-radius);
-            background: linear-gradient(45deg, #FF6B6B, #6AC1FF, #6AFFC1) border-box;
-            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-            pointer-events: none;
-        }
-        .gallery-item:hover::before {
-            opacity: 1;
         }
         .gallery-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-lg);
         }
         .gallery-item img {
             width: 100%;
@@ -470,11 +241,6 @@
             border-radius: 50px;
             font-size: 0.85rem;
             margin-bottom: 0.8rem;
-            transition: var(--transition);
-        }
-        .gallery-item:hover .gallery-category {
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
-            color: white;
         }
         .gallery-title {
             font-size: 1.3rem;
@@ -490,21 +256,6 @@
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--black);
-            position: relative;
-            display: inline-block;
-        }
-        .gallery-price::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
-            transition: width 0.3s ease;
-        }
-        .gallery-item:hover .gallery-price::after {
-            width: 100%;
         }
 
         /* Modal para vista ampliada */
@@ -531,8 +282,6 @@
             overflow: hidden;
             background: white;
             position: relative;
-            border: 3px solid;
-            border-image: linear-gradient(45deg, #FF6B6B, #6AC1FF, #6AFFC1) 1;
         }
         .modal-content img {
             width: 100%;
@@ -554,20 +303,8 @@
             z-index: 2001;
             background: none;
             border: none;
-            transition: var(--transition);
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(0,0,0,0.5);
         }
-        .modal-close:hover { 
-            color: #FF6B6B; 
-            background: rgba(0,0,0,0.8);
-            transform: rotate(90deg);
-        }
+        .modal-close:hover { color: var(--light-gray); }
 
         /* Collections & Artist Info */
         .collections-grid {
@@ -582,41 +319,22 @@
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            border-top: 5px solid;
-            border-image: linear-gradient(90deg, #FF6B6B, #6AC1FF) 1;
+            border-top: 5px solid var(--dark-gray);
         }
         .collection-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-lg);
         }
         .collection-icon {
             font-size: 2.5rem;
             color: var(--dark-gray);
             margin-bottom: 1.5rem;
-            transition: var(--transition);
-        }
-        .collection-card:hover .collection-icon {
-            color: #FF6B6B;
-            transform: scale(1.1);
         }
         .artist-section {
             background-color: white;
             border-radius: var(--border-radius);
             padding: 4rem;
             box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-        .artist-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
         }
         .artist-content {
             display: grid;
@@ -633,76 +351,37 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            transition: var(--transition);
         }
-        .artist-highlights li:hover {
-            padding-left: 10px;
-            border-color: #FF6B6B;
-        }
-        .artist-highlights li i { 
-            color: #6AC1FF;
-            transition: var(--transition);
-        }
-        .artist-highlights li:hover i {
-            color: #FF6B6B;
-        }
+        .artist-highlights li i { color: var(--dark-gray); }
 
         /* CTA & Footer */
         .cta-section {
             text-align: center;
             padding: 5rem 2rem;
-            background: linear-gradient(135deg, #2A2A2A 0%, #121212 100%);
+            background: var(--gradient-primary);
             color: white;
             border-radius: var(--border-radius);
             margin: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, 
-                rgba(255, 107, 107, 0.1) 0%, 
-                rgba(106, 193, 255, 0.1) 50%, 
-                rgba(106, 255, 193, 0.1) 100%);
         }
         .cta-section h2 {
             color: white;
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
-            position: relative;
         }
         .cta-section p {
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto 2.5rem;
-            position: relative;
         }
         .cta-section .btn {
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
-            color: white;
-            position: relative;
-            border: none;
+            background: white;
+            color: var(--black);
         }
         footer {
             background-color: var(--black);
             color: white;
             padding: 4rem 0 2rem;
-            position: relative;
-        }
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
         }
         .footer-content {
             display: grid;
@@ -722,7 +401,7 @@
             position: absolute;
             bottom: 0; left: 0;
             width: 40px; height: 2px;
-            background: linear-gradient(90deg, #FF6B6B, #6AC1FF);
+            background: white;
         }
         .footer-links { list-style: none; }
         .footer-links li { margin-bottom: 0.8rem; }
@@ -730,12 +409,8 @@
             color: rgba(255, 255, 255, 0.75);
             text-decoration: none;
             transition: var(--transition);
-            display: inline-block;
         }
-        .footer-links a:hover { 
-            color: #6AC1FF; 
-            padding-left: 5px; 
-        }
+        .footer-links a:hover { color: white; padding-left: 5px; }
         .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
         .social-links a {
             display: inline-flex;
@@ -746,11 +421,10 @@
             border-radius: 50%;
             color: white;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
         }
         .social-links a:hover {
-            background: linear-gradient(45deg, #FF6B6B, #6AC1FF);
+            background: white;
+            color: var(--black);
             transform: translateY(-3px);
         }
         .footer-bottom {
@@ -762,13 +436,6 @@
         }
 
         /* Responsive */
-        @media (max-width: 1200px) {
-            .side-effects,
-            .color-line,
-            .floating-dots {
-                display: none;
-            }
-        }
         @media (max-width: 992px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.8rem; }
@@ -781,42 +448,15 @@
             .section-title { font-size: 2.3rem; }
             .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
             .footer-content { grid-template-columns: 1fr; }
-            .cta-section h2 { font-size: 2rem; }
-            .artist-section { padding: 2rem; }
-        }
-        
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Efecto de aparición */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- Elementos decorativos laterales -->
-    <div class="side-effects left"></div>
-    <div class="side-effects right"></div>
-    <div class="color-line top"></div>
-    <div class="color-line bottom"></div>
-    
-    <!-- Puntos flotantes -->
-    <div class="floating-dots" id="floatingDots"></div>
-
     <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo"><i class="fas fa-palette"></i> Galería <span>D'Albora</span></a>
+                <a href="#" class="logo"><i class="fas fa-palette"></i> Galería Arte<span>Claudia D'Albora</span></a>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Inicio</a></li>
                     <li><a href="#gallery">Obras</a></li>
@@ -831,22 +471,22 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1 class="fade-in">La Luz Capturada en Pinceladas</h1>
-            <p class="fade-in">Explora el mundo impresionista de Claudia D'Albora, donde cada paisaje es un diálogo íntimo con la luz natural, el color y el instante fugaz.</p>
-            <div class="hero-buttons fade-in">
+            <h1>La Luz Capturada en Pinceladas</h1>
+            <p>Explora el mundo impresionista de Claudia D'Albora, donde cada paisaje es un diálogo íntimo con la luz natural, el color y el instante fugaz.</p>
+            <div class="hero-buttons">
                 <a href="#gallery" class="btn btn-primary">Explorar la Colección</a>
                 <a href="#artist" class="btn btn-outline">Conocer a la Artista</a>
             </div>
             <div class="hero-stats">
-                <div class="stat-box fade-in">
+                <div class="stat-box">
                     <span class="number">18</span>
                     <span class="label">Obras en Exhibición</span>
                 </div>
-                <div class="stat-box fade-in">
+                <div class="stat-box">
                     <span class="number">100%</span>
                     <span class="label">Pintura Impresionista</span>
                 </div>
-                <div class="stat-box fade-in">
+                <div class="stat-box">
                     <span class="number">4</span>
                     <span class="label">Series Temáticas</span>
                 </div>
@@ -857,11 +497,11 @@
     <!-- Gallery Section -->
     <section class="section" id="gallery">
         <div class="container">
-            <h2 class="section-title fade-in">Pinturas Impresionistas</h2>
-            <p class="section-subtitle fade-in">Una selección de obras donde la pincelada suelta y el estudio de la luz transforman escenas cotidianas y paisajes en emociones visuales.</p>
+            <h2 class="section-title">Pinturas Impresionistas</h2>
+            <p class="section-subtitle">Una selección de obras donde la pincelada suelta y el estudio de la luz transforman escenas cotidianas y paisajes en emociones visuales.</p>
 
             <!-- Filtros por Tema -->
-            <div class="gallery-filters fade-in">
+            <div class="gallery-filters">
                 <button class="filter-btn active" data-filter="all">Todas las Obras</button>
                 <button class="filter-btn" data-filter="paisaje">Paisajes</button>
                 <button class="filter-btn" data-filter="casa">Casas y Jardines</button>
@@ -873,7 +513,7 @@
             <!-- Grid de Galería con todas las IMÁGENES desde GitHub Pages -->
             <div class="gallery-grid">
                 <!-- Obra 1: camino1.jpeg -->
-                <div class="gallery-item fade-in" data-category="paisaje" data-index="1">
+                <div class="gallery-item" data-category="paisaje" data-index="1">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/camino1.jpeg" alt="Camino entre árboles" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
@@ -883,7 +523,7 @@
                     </div>
                 </div>
                 <!-- Obra 2: casa1.jpeg -->
-                <div class="gallery-item fade-in" data-category="casa" data-index="2">
+                <div class="gallery-item" data-category="casa" data-index="2">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa1.jpeg" alt="Casa de campo con jardín" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Casas y Jardines</span>
@@ -893,7 +533,7 @@
                     </div>
                 </div>
                 <!-- Obra 3: casa2.jpeg -->
-                <div class="gallery-item fade-in" data-category="casa" data-index="3">
+                <div class="gallery-item" data-category="casa" data-index="3">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa2.jpeg" alt="Casa con techos rojos" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Casas y Jardines</span>
@@ -903,7 +543,7 @@
                     </div>
                 </div>
                 <!-- Obra 4: casa4.jpeg -->
-                <div class="gallery-item fade-in" data-category="casa" data-index="4">
+                <div class="gallery-item" data-category="casa" data-index="4">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa4.jpeg" alt="Casa blanca con árboles" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Casas y Jardines</span>
@@ -913,7 +553,7 @@
                     </div>
                 </div>
                 <!-- Obra 5: rojo.jpeg -->
-                <div class="gallery-item fade-in" data-category="casa" data-index="5">
+                <div class="gallery-item" data-category="casa" data-index="5">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/rojo.jpeg" alt="Casa roja con jardín" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Casas y Jardines</span>
@@ -923,7 +563,7 @@
                     </div>
                 </div>
                 <!-- Obra 6: pincelada.jpeg -->
-                <div class="gallery-item fade-in" data-category="destacada" data-index="6">
+                <div class="gallery-item" data-category="destacada" data-index="6">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/pincelada.jpeg" alt="Estudio de pinceladas" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Obras Destacadas</span>
@@ -933,7 +573,7 @@
                     </div>
                 </div>
                 <!-- Obra 7: escultura.jpg -->
-                <div class="gallery-item fade-in" data-category="destacada" data-index="7">
+                <div class="gallery-item" data-category="destacada" data-index="7">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/escultura.jpg" alt="Escultura en jardín" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Obras Destacadas</span>
@@ -943,7 +583,7 @@
                     </div>
                 </div>
                 <!-- Obra 8: marina.jpeg -->
-                <div class="gallery-item fade-in" data-category="marina" data-index="8">
+                <div class="gallery-item" data-category="marina" data-index="8">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina.jpeg" alt="Paisaje marino" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Marinas</span>
@@ -953,7 +593,7 @@
                     </div>
                 </div>
                 <!-- Obra 9: marina2.jpeg -->
-                <div class="gallery-item fade-in" data-category="marina" data-index="9">
+                <div class="gallery-item" data-category="marina" data-index="9">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina2.jpeg" alt="Atardecer en el mar" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Marinas</span>
@@ -963,7 +603,7 @@
                     </div>
                 </div>
                 <!-- Obra 10: marina3.jpeg -->
-                <div class="gallery-item fade-in" data-category="marina" data-index="10">
+                <div class="gallery-item" data-category="marina" data-index="10">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina3.jpeg" alt="Marina con botes" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Marinas</span>
@@ -973,7 +613,7 @@
                     </div>
                 </div>
                 <!-- Obra 11: marina4.jpeg -->
-                <div class="gallery-item fade-in" data-category="marina" data-index="11">
+                <div class="gallery-item" data-category="marina" data-index="11">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina4.jpeg" alt="Costa rocosa" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Marinas</span>
@@ -983,7 +623,7 @@
                     </div>
                 </div>
                 <!-- Obra 12: marinacircular.jpeg -->
-                <div class="gallery-item fade-in" data-category="marina" data-index="12">
+                <div class="gallery-item" data-category="marina" data-index="12">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marinacircular.jpeg" alt="Marina circular" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Marinas</span>
@@ -993,7 +633,7 @@
                     </div>
                 </div>
                 <!-- Obra 13: premiorenaca.jpeg -->
-                <div class="gallery-item fade-in" data-category="destacada" data-index="13">
+                <div class="gallery-item" data-category="destacada" data-index="13">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/premiorenaca.jpeg" alt="Obra premiada" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Obras Destacadas</span>
@@ -1003,7 +643,7 @@
                     </div>
                 </div>
                 <!-- Obra 14: puente1.jpeg -->
-                <div class="gallery-item fade-in" data-category="paisaje" data-index="14">
+                <div class="gallery-item" data-category="paisaje" data-index="14">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/puente1.jpeg" alt="Puente sobre río" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
@@ -1013,7 +653,7 @@
                     </div>
                 </div>
                 <!-- Obra 15: rio.jpeg -->
-                <div class="gallery-item fade-in" data-category="paisaje" data-index="15">
+                <div class="gallery-item" data-category="paisaje" data-index="15">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/rio.jpeg" alt="Río en el bosque" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
@@ -1023,7 +663,7 @@
                     </div>
                 </div>
                 <!-- Obra 16: sendero.jpeg -->
-                <div class="gallery-item fade-in" data-category="paisaje" data-index="16">
+                <div class="gallery-item" data-category="paisaje" data-index="16">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/sendero.jpeg" alt="Sendero en el bosque" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
@@ -1033,7 +673,7 @@
                     </div>
                 </div>
                 <!-- Obra 17: sendero floral.jpeg -->
-                <div class="gallery-item fade-in" data-category="paisaje" data-index="17">
+                <div class="gallery-item" data-category="paisaje" data-index="17">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/sendero%20floral.jpeg" alt="Sendero con flores" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
@@ -1043,7 +683,7 @@
                     </div>
                 </div>
                 <!-- Obra 18: viajebote.jpeg -->
-                <div class="gallery-item fade-in" data-category="marina" data-index="18">
+                <div class="gallery-item" data-category="marina" data-index="18">
                     <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/viajebote.jpeg" alt="Viaje en bote" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Marinas</span>
@@ -1054,7 +694,7 @@
                 </div>
             </div>
 
-            <div style="text-align: center;" class="fade-in">
+            <div style="text-align: center;">
                 <a href="#contact" class="btn btn-primary">Solicitar Catálogo Completo</a>
             </div>
         </div>
@@ -1076,28 +716,28 @@
     <!-- Collections Section -->
     <section class="section" id="collections" style="background-color: #f5f5f5;">
         <div class="container">
-            <h2 class="section-title fade-in">Series Impresionistas</h2>
-            <p class="section-subtitle fade-in">Explora las colecciones temáticas donde Claudia D'Albora profundiza en diferentes aspectos de la luz y el paisaje.</p>
+            <h2 class="section-title">Series Impresionistas</h2>
+            <p class="section-subtitle">Explora las colecciones temáticas donde Claudia D'Albora profundiza en diferentes aspectos de la luz y el paisaje.</p>
             <div class="collections-grid">
-                <div class="collection-card fade-in">
+                <div class="collection-card">
                     <div class="collection-icon"><i class="fas fa-mountain-sun"></i></div>
                     <h3>Paisajes al Óleo</h3>
                     <p>Estudio de la luz cambiante en montañas, valles y costas, trabajado directamente al aire libre (plein air).</p>
                     <p><strong>6 obras</strong></p>
                 </div>
-                <div class="collection-card fade-in">
+                <div class="collection-card">
                     <div class="collection-icon"><i class="fas fa-home"></i></div>
                     <h3>Casas con Alma</h3>
                     <p>La arquitectura integrada en la naturaleza, donde la luz define el carácter y calidez de cada morada.</p>
                     <p><strong>4 obras</strong></p>
                 </div>
-                <div class="collection-card fade-in">
+                <div class="collection-card">
                     <div class="collection-icon"><i class="fas fa-water"></i></div>
                     <h3>Marinas</h3>
                     <p>La fuerza del mar y la calma de la costa capturadas en diferentes momentos del día y condiciones de luz.</p>
                     <p><strong>6 obras</strong></p>
                 </div>
-                <div class="collection-card fade-in">
+                <div class="collection-card">
                     <div class="collection-icon"><i class="fas fa-star"></i></div>
                     <h3>Obras Destacadas</h3>
                     <p>Selección especial de obras premiadas y piezas representativas de la evolución artística.</p>
@@ -1110,17 +750,17 @@
     <!-- Artist Section -->
     <section class="section" id="artist">
         <div class="container">
-            <div class="artist-section fade-in">
+            <div class="artist-section">
                 <div class="artist-content">
                     <div class="artist-text">
                         <h2>Claudia D'Albora</h2>
                         <p><strong>Pintora impresionista contemporánea</strong> cuya obra se centra en la interpretación emotiva del paisaje. Inspirada por los maestros del siglo XIX como Monet y Pissarro, desarrolla su trabajo principalmente <em>en plein air</em> para capturar la verdadera esencia de la luz.</p>
-                        <p>Su técnica se caracteriza por el uso de colores puros, pinceladas visibles y texturas que invitan al espectador a completar la escena. Reside entre Chile y Francia, donde encuentra continua inspiración en la diversidad de los paisajes.</p>
+                        <p>Su técnica se caracteriza por el uso de colores puros, pinceladas visibles y texturas que invitan al espectador a completar la escena. Reside entre Chile, donde encuentra continua inspiración en la diversidad de los paisajes.</p>
                         <ul class="artist-highlights">
-                            <li><i class="fas fa-graduation-cap"></i> Maestría en Artes Visuales, Universidad de Chile.</li>
-                            <li><i class="fas fa-award"></i> Premio "Mejor Obra Impresionista", Salón Nacional 2022.</li>
-                            <li><i class="fas fa-globe-europe"></i> Exposiciones en Santiago, París y Buenos Aires.</li>
-                            <li><i class="fas fa-users"></i> Obras en colecciones privadas en Europa y América.</li>
+                            <li><i class="fas fa-graduation-cap"></i> Maestría en Artes Visuales, Bellas Artes.</li>
+                            <li><i class="fas fa-award"></i> Premio "Mejor Obra Impresionista", Salón Reñaca, Viña del Mar 1990.</li>
+                            <li><i class="fas fa-globe-europe"></i> Exposiciones en Santiago, Viña del Mar - Chile y Miraflores - Perú.</li>
+                            <li><i class="fas fa-users"></i> Obras en colecciones privadas en Chile y Perú.</li>
                         </ul>
                         <a href="#contact" class="btn btn-primary">Contactar a la Artista</a>
                     </div>
@@ -1141,7 +781,7 @@
     <!-- CTA Section -->
     <section class="section">
         <div class="container">
-            <div class="cta-section fade-in">
+            <div class="cta-section">
                 <h2>¿Interesado en una obra o en visitar el estudio?</h2>
                 <p>Contáctanos para coordinar una visita privada, solicitar el catálogo completo en alta resolución o conversar sobre encargos especiales de paisajes impresionistas.</p>
                 <a href="mailto:contacto@arteclaudiadalbora.cl" class="btn">contacto@arteclaudiadalbora.cl</a>
@@ -1153,8 +793,8 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col fade-in">
-                    <h3>Galería D'Albora</h3>
+                <div class="footer-col">
+                    <h3>Galería Arte Claudia D'Albora</h3>
                     <p>Especializados en la promoción y venta de pintura impresionista contemporánea, con foco en paisajes y escenas de luz natural.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1163,7 +803,7 @@
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="footer-col fade-in">
+                <div class="footer-col">
                     <h3>Enlaces Rápidos</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Inicio</a></li>
@@ -1172,7 +812,7 @@
                         <li><a href="#artist">Biografía</a></li>
                     </ul>
                 </div>
-                <div class="footer-col fade-in">
+                <div class="footer-col">
                     <h3>Servicios</h3>
                     <ul class="footer-links">
                         <li><a href="#contact">Asesoría para Coleccionistas</a></li>
@@ -1181,7 +821,7 @@
                         <li><a href="#contact">Certificado de Autenticidad</a></li>
                     </ul>
                 </div>
-                <div class="footer-col fade-in">
+                <div class="footer-col">
                     <h3>Contacto</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-envelope"></i> contacto@arteclaudiadalbora.cl</li>
@@ -1262,37 +902,6 @@
                     document.body.style.overflow = 'auto';
                 }
             });
-
-            // Efecto de aparición al hacer scroll
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const appearOnScroll = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        appearOnScroll.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            fadeElements.forEach(element => {
-                appearOnScroll.observe(element);
-            });
-
-            // Inicializar algunos elementos como visibles
-            document.querySelectorAll('.hero .fade-in').forEach(el => {
-                el.classList.add('visible');
-            });
-
-            // Crear puntos flotantes
-            const floatingDots = document.getElementById('floatingDots');
-            for (let i = 0; i < 20; i++) {
-                const dot = document.createElement('span');
-                dot.style.left = Math.random() * 100 + 'vw';
-                dot.style.animationDelay = Math.random() * 15 + 's';
-                dot.style.animationDuration = (15 + Math.random() * 10) + 's';
-                floatingDots.appendChild(dot);
-            }
         });
     </script>
 </body>
