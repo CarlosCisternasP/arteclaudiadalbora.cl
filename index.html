@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería D'Albora | Impresionismo & Paisajes</title>
+    <title>Galería Arte - Claudia D'Albora | Impresionismo & Paisajes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --ocre: #C17A3F;
-            --ocre-light: #E3A86B;
-            --sky: #A2C4E0;
-            --sage: #8A9B7C;
-            --gold: #D4B483;
-            --light: #F8F5F0;
-            --dark: #2C2416;
-            --gray: #7D7463;
+            --black: #121212;
+            --dark-gray: #2A2A2A;
+            --medium-gray: #555555;
+            --light-gray: #AAAAAA;
+            --light: #F0F0F0;
+            --accent: #666666;
             --card-bg: #FFFFFF;
-            --gradient-primary: linear-gradient(135deg, var(--ocre) 0%, var(--gold) 100%);
-            --gradient-light: linear-gradient(135deg, var(--sky) 0%, var(--light) 100%);
+            --gradient-primary: linear-gradient(135deg, var(--dark-gray) 0%, var(--black) 100%);
+            --gradient-light: linear-gradient(135deg, var(--medium-gray) 0%, var(--light) 100%);
             --transition: all 0.3s ease;
-            --shadow: 0 5px 15px rgba(44, 36, 22, 0.08);
-            --shadow-lg: 0 15px 35px rgba(44, 36, 22, 0.12);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.2);
             --border-radius: 12px;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--light);
-            color: var(--dark);
+            color: var(--dark-gray);
             line-height: 1.7;
             overflow-x: hidden;
         }
@@ -38,7 +36,7 @@
         .section-title {
             font-size: 2.8rem;
             margin-bottom: 1rem;
-            color: var(--dark);
+            color: var(--black);
             text-align: center;
             position: relative;
         }
@@ -52,7 +50,7 @@
         }
         .section-subtitle {
             text-align: center;
-            color: var(--gray);
+            color: var(--medium-gray);
             font-size: 1.1rem;
             max-width: 700px;
             margin: 0 auto 3rem;
@@ -81,23 +79,23 @@
         }
         .btn-outline {
             background: transparent;
-            color: var(--ocre);
-            border: 2px solid var(--ocre);
+            color: var(--dark-gray);
+            border: 2px solid var(--dark-gray);
         }
         .btn-outline:hover {
-            background-color: var(--ocre);
+            background-color: var(--dark-gray);
             color: white;
         }
 
         /* Header & Navigation */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(44, 36, 22, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
             padding: 1rem 0;
         }
         .navbar {
@@ -109,16 +107,16 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--dark);
+            color: var(--black);
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-        .logo span { color: var(--ocre); }
+        .logo span { color: var(--dark-gray); }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
         .nav-links a {
-            color: var(--dark);
+            color: var(--dark-gray);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
@@ -130,11 +128,11 @@
             position: absolute;
             bottom: 0; left: 0;
             width: 0; height: 2px;
-            background: var(--ocre);
+            background: var(--black);
             transition: width 0.3s ease;
         }
         .nav-links a:hover:after, .nav-links a.active:after { width: 100%; }
-        .nav-links a:hover, .nav-links a.active { color: var(--ocre); }
+        .nav-links a:hover, .nav-links a.active { color: var(--black); }
 
         /* Hero Section */
         .hero {
@@ -148,11 +146,11 @@
             font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            color: var(--dark);
+            color: var(--black);
         }
         .hero p {
             font-size: 1.3rem;
-            color: var(--gray);
+            color: var(--medium-gray);
             max-width: 800px;
             margin: 0 auto 2.5rem;
         }
@@ -171,12 +169,12 @@
             display: block;
             font-size: 2.8rem;
             font-weight: 700;
-            color: var(--ocre);
+            color: var(--black);
             line-height: 1;
             margin-bottom: 0.5rem;
         }
         .stat-box .label {
-            color: var(--gray);
+            color: var(--medium-gray);
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -193,16 +191,16 @@
         .filter-btn {
             padding: 0.6rem 1.8rem;
             background: white;
-            border: 1px solid rgba(44, 36, 22, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 50px;
-            color: var(--dark);
+            color: var(--dark-gray);
             cursor: pointer;
             transition: var(--transition);
         }
         .filter-btn:hover, .filter-btn.active {
-            background: var(--ocre);
+            background: var(--black);
             color: white;
-            border-color: var(--ocre);
+            border-color: var(--black);
         }
         .gallery-grid {
             display: grid;
@@ -237,8 +235,8 @@
         }
         .gallery-category {
             display: inline-block;
-            background-color: rgba(194, 122, 63, 0.1);
-            color: var(--ocre);
+            background-color: rgba(34, 34, 34, 0.1);
+            color: var(--dark-gray);
             padding: 0.3rem 1rem;
             border-radius: 50px;
             font-size: 0.85rem;
@@ -247,17 +245,17 @@
         .gallery-title {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
-            color: var(--dark);
+            color: var(--black);
         }
         .gallery-details {
             font-size: 0.95rem;
-            color: var(--gray);
+            color: var(--medium-gray);
             margin-bottom: 0.8rem;
         }
         .gallery-price {
             font-size: 1.4rem;
             font-weight: 700;
-            color: var(--ocre);
+            color: var(--black);
         }
 
         /* Modal para vista ampliada */
@@ -267,7 +265,7 @@
             z-index: 2000;
             left: 0; top: 0;
             width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.9);
+            background-color: rgba(0,0,0,0.95);
             justify-content: center;
             align-items: center;
             opacity: 0;
@@ -306,7 +304,7 @@
             background: none;
             border: none;
         }
-        .modal-close:hover { color: var(--ocre); }
+        .modal-close:hover { color: var(--light-gray); }
 
         /* Collections & Artist Info */
         .collections-grid {
@@ -321,7 +319,7 @@
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border-top: 5px solid var(--ocre);
+            border-top: 5px solid var(--dark-gray);
         }
         .collection-card:hover {
             transform: translateY(-8px);
@@ -329,7 +327,7 @@
         }
         .collection-icon {
             font-size: 2.5rem;
-            color: var(--ocre);
+            color: var(--dark-gray);
             margin-bottom: 1.5rem;
         }
         .artist-section {
@@ -345,16 +343,16 @@
             align-items: center;
         }
         .artist-text h2 { margin-bottom: 1.5rem; }
-        .artist-text p { margin-bottom: 1.5rem; color: var(--gray); }
+        .artist-text p { margin-bottom: 1.5rem; color: var(--medium-gray); }
         .artist-highlights { list-style: none; margin: 2rem 0; }
         .artist-highlights li {
             padding: 0.5rem 0;
-            border-bottom: 1px dashed rgba(44, 36, 22, 0.1);
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        .artist-highlights li i { color: var(--ocre); }
+        .artist-highlights li i { color: var(--dark-gray); }
 
         /* CTA & Footer */
         .cta-section {
@@ -372,16 +370,16 @@
         }
         .cta-section p {
             font-size: 1.2rem;
-            opacity: 0.95;
+            opacity: 0.9;
             max-width: 700px;
             margin: 0 auto 2.5rem;
         }
         .cta-section .btn {
             background: white;
-            color: var(--ocre);
+            color: var(--black);
         }
         footer {
-            background-color: var(--dark);
+            background-color: var(--black);
             color: white;
             padding: 4rem 0 2rem;
         }
@@ -403,7 +401,7 @@
             position: absolute;
             bottom: 0; left: 0;
             width: 40px; height: 2px;
-            background: var(--ocre);
+            background: white;
         }
         .footer-links { list-style: none; }
         .footer-links li { margin-bottom: 0.8rem; }
@@ -425,7 +423,8 @@
             transition: var(--transition);
         }
         .social-links a:hover {
-            background: var(--ocre);
+            background: white;
+            color: var(--black);
             transform: translateY(-3px);
         }
         .footer-bottom {
@@ -480,7 +479,7 @@
             </div>
             <div class="hero-stats">
                 <div class="stat-box">
-                    <span class="number">15</span>
+                    <span class="number">18</span>
                     <span class="label">Obras en Exhibición</span>
                 </div>
                 <div class="stat-box">
@@ -488,7 +487,7 @@
                     <span class="label">Pintura Impresionista</span>
                 </div>
                 <div class="stat-box">
-                    <span class="number">3</span>
+                    <span class="number">4</span>
                     <span class="label">Series Temáticas</span>
                 </div>
             </div>
@@ -507,14 +506,15 @@
                 <button class="filter-btn" data-filter="paisaje">Paisajes</button>
                 <button class="filter-btn" data-filter="casa">Casas y Jardines</button>
                 <button class="filter-btn" data-filter="acuarela">Acuarelas</button>
+                <button class="filter-btn" data-filter="marina">Marinas</button>
                 <button class="filter-btn" data-filter="destacada">Obras Destacadas</button>
             </div>
 
-            <!-- Grid de Galería con las 15 IMÁGENES desde GitHub Pages -->
+            <!-- Grid de Galería con todas las IMÁGENES desde GitHub Pages -->
             <div class="gallery-grid">
-                <!-- Obra 1: camino1.jpg -->
+                <!-- Obra 1: camino1.jpeg -->
                 <div class="gallery-item" data-category="paisaje" data-index="1">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/camino1.jpg" alt="Camino entre árboles" loading="lazy">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/camino1.jpeg" alt="Camino entre árboles" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
                         <h3 class="gallery-title">Camino Sereno</h3>
@@ -522,9 +522,9 @@
                         <div class="gallery-price">$650.000</div>
                     </div>
                 </div>
-                <!-- Obra 2: casa1.jpg -->
+                <!-- Obra 2: casa1.jpeg -->
                 <div class="gallery-item" data-category="casa" data-index="2">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa1.jpg" alt="Casa de campo con jardín" loading="lazy">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa1.jpeg" alt="Casa de campo con jardín" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Casas y Jardines</span>
                         <h3 class="gallery-title">Refugio Campestre</h3>
@@ -532,9 +532,9 @@
                         <div class="gallery-price">$580.000</div>
                     </div>
                 </div>
-                <!-- Obra 3: casa2.jpg -->
+                <!-- Obra 3: casa2.jpeg -->
                 <div class="gallery-item" data-category="casa" data-index="3">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa2.jpg" alt="Casa con techos rojos" loading="lazy">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa2.jpeg" alt="Casa con techos rojos" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Casas y Jardines</span>
                         <h3 class="gallery-title">La Casa del Tejado Rojo</h3>
@@ -542,9 +542,9 @@
                         <div class="gallery-price">$720.000</div>
                     </div>
                 </div>
-                <!-- Obra 4: casa3.jpg -->
+                <!-- Obra 4: casa4.jpeg -->
                 <div class="gallery-item" data-category="casa" data-index="4">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa3.jpg" alt="Casa blanca con árboles" loading="lazy">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa4.jpeg" alt="Casa blanca con árboles" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Casas y Jardines</span>
                         <h3 class="gallery-title">Blanca Mansión</h3>
@@ -552,24 +552,24 @@
                         <div class="gallery-price">$690.000</div>
                     </div>
                 </div>
-                <!-- Obra 5: casa4.jpg -->
+                <!-- Obra 5: rojo.jpeg -->
                 <div class="gallery-item" data-category="casa" data-index="5">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa4.jpg" alt="Casa amarilla con flores" loading="lazy">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/rojo.jpeg" alt="Casa roja con jardín" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Casas y Jardines</span>
-                        <h3 class="gallery-title">Rincón Amarillo</h3>
+                        <h3 class="gallery-title">Rincón Rojo</h3>
                         <p class="gallery-details">Óleo sobre lienzo • 75x95 cm • 2024</p>
                         <div class="gallery-price">$550.000</div>
                     </div>
                 </div>
-                <!-- Obra 6: casa5.jpg -->
-                <div class="gallery-item" data-category="casa" data-index="6">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/casa5.jpg" alt="Casa pequeña con sendero" loading="lazy">
+                <!-- Obra 6: pincelada.jpeg -->
+                <div class="gallery-item" data-category="destacada" data-index="6">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/pincelada.jpeg" alt="Estudio de pinceladas" loading="lazy">
                     <div class="gallery-info">
-                        <span class="gallery-category">Casas y Jardines</span>
-                        <h3 class="gallery-title">La Cabaña del Sendero</h3>
-                        <p class="gallery-details">Acuarela sobre papel • 50x65 cm • 2023</p>
-                        <div class="gallery-price">$350.000</div>
+                        <span class="gallery-category">Obras Destacadas</span>
+                        <h3 class="gallery-title">Estudio de Pinceladas</h3>
+                        <p class="gallery-details">Óleo sobre lienzo • 100x130 cm • 2024</p>
+                        <div class="gallery-price">$850.000</div>
                     </div>
                 </div>
                 <!-- Obra 7: escultura.jpg -->
@@ -582,39 +582,59 @@
                         <div class="gallery-price">$850.000</div>
                     </div>
                 </div>
-                <!-- Obra 8: marina.jpg -->
-                <div class="gallery-item" data-category="paisaje" data-index="8">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina.jpg" alt="Paisaje marino" loading="lazy">
+                <!-- Obra 8: marina.jpeg -->
+                <div class="gallery-item" data-category="marina" data-index="8">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina.jpeg" alt="Paisaje marino" loading="lazy">
                     <div class="gallery-info">
-                        <span class="gallery-category">Paisaje</span>
+                        <span class="gallery-category">Marinas</span>
                         <h3 class="gallery-title">Calma Marina</h3>
                         <p class="gallery-details">Óleo sobre tela • 80x100 cm • 2023</p>
                         <div class="gallery-price">$600.000</div>
                     </div>
                 </div>
-                <!-- Obra 9: marina2.JPG -->
-                <div class="gallery-item" data-category="paisaje" data-index="9">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina2.JPG" alt="Atardecer en el mar" loading="lazy">
+                <!-- Obra 9: marina2.jpeg -->
+                <div class="gallery-item" data-category="marina" data-index="9">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina2.jpeg" alt="Atardecer en el mar" loading="lazy">
                     <div class="gallery-info">
-                        <span class="gallery-category">Paisaje</span>
+                        <span class="gallery-category">Marinas</span>
                         <h3 class="gallery-title">Atardecer en la Costa</h3>
                         <p class="gallery-details">Óleo sobre lienzo • 90x120 cm • 2024</p>
                         <div class="gallery-price">$750.000</div>
                     </div>
                 </div>
-                <!-- Obra 10: pinturas.jpg -->
-                <div class="gallery-item" data-category="destacada" data-index="10">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/pinturas.jpg" alt="Colección de pinturas" loading="lazy">
+                <!-- Obra 10: marina3.jpeg -->
+                <div class="gallery-item" data-category="marina" data-index="10">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina3.jpeg" alt="Marina con botes" loading="lazy">
                     <div class="gallery-info">
-                        <span class="gallery-category">Obras Destacadas</span>
-                        <h3 class="gallery-title">Estudio del Artista</h3>
-                        <p class="gallery-details">Óleo sobre tela • 110x140 cm • 2024</p>
-                        <div class="gallery-price">$820.000</div>
+                        <span class="gallery-category">Marinas</span>
+                        <h3 class="gallery-title">Puerto al Amanecer</h3>
+                        <p class="gallery-details">Óleo sobre lienzo • 85x110 cm • 2023</p>
+                        <div class="gallery-price">$680.000</div>
                     </div>
                 </div>
-                <!-- Obra 11: premiorenaca.jpg -->
-                <div class="gallery-item" data-category="destacada" data-index="11">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/premiorenaca.jpg" alt="Obra premiada" loading="lazy">
+                <!-- Obra 11: marina4.jpeg -->
+                <div class="gallery-item" data-category="marina" data-index="11">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marina4.jpeg" alt="Costa rocosa" loading="lazy">
+                    <div class="gallery-info">
+                        <span class="gallery-category">Marinas</span>
+                        <h3 class="gallery-title">Costa Rocosa</h3>
+                        <p class="gallery-details">Acuarela sobre papel • 60x80 cm • 2024</p>
+                        <div class="gallery-price">$420.000</div>
+                    </div>
+                </div>
+                <!-- Obra 12: marinacircular.jpeg -->
+                <div class="gallery-item" data-category="marina" data-index="12">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/marinacircular.jpeg" alt="Marina circular" loading="lazy">
+                    <div class="gallery-info">
+                        <span class="gallery-category">Marinas</span>
+                        <h3 class="gallery-title">Bahía Circular</h3>
+                        <p class="gallery-details">Óleo sobre lienzo • 70x90 cm • 2023</p>
+                        <div class="gallery-price">$590.000</div>
+                    </div>
+                </div>
+                <!-- Obra 13: premiorenaca.jpeg -->
+                <div class="gallery-item" data-category="destacada" data-index="13">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/premiorenaca.jpeg" alt="Obra premiada" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Obras Destacadas</span>
                         <h3 class="gallery-title">Premio Renaca</h3>
@@ -622,9 +642,9 @@
                         <div class="gallery-price">$780.000</div>
                     </div>
                 </div>
-                <!-- Obra 12: puente1.jpg -->
-                <div class="gallery-item" data-category="paisaje" data-index="12">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/puente1.jpg" alt="Puente sobre río" loading="lazy">
+                <!-- Obra 14: puente1.jpeg -->
+                <div class="gallery-item" data-category="paisaje" data-index="14">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/puente1.jpeg" alt="Puente sobre río" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
                         <h3 class="gallery-title">El Puente de los Suspiros</h3>
@@ -632,9 +652,9 @@
                         <div class="gallery-price">$380.000</div>
                     </div>
                 </div>
-                <!-- Obra 13: rio.jpg -->
-                <div class="gallery-item" data-category="paisaje" data-index="13">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/rio.jpg" alt="Río en el bosque" loading="lazy">
+                <!-- Obra 15: rio.jpeg -->
+                <div class="gallery-item" data-category="paisaje" data-index="15">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/rio.jpeg" alt="Río en el bosque" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
                         <h3 class="gallery-title">Río Serpenteante</h3>
@@ -642,9 +662,9 @@
                         <div class="gallery-price">$680.000</div>
                     </div>
                 </div>
-                <!-- Obra 14: sendero.jpg -->
-                <div class="gallery-item" data-category="paisaje" data-index="14">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/sendero.jpg" alt="Sendero en el bosque" loading="lazy">
+                <!-- Obra 16: sendero.jpeg -->
+                <div class="gallery-item" data-category="paisaje" data-index="16">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/sendero.jpeg" alt="Sendero en el bosque" loading="lazy">
                     <div class="gallery-info">
                         <span class="gallery-category">Paisaje</span>
                         <h3 class="gallery-title">Sendero Secreto</h3>
@@ -652,14 +672,24 @@
                         <div class="gallery-price">$590.000</div>
                     </div>
                 </div>
-                <!-- Obra 15: Acuarela adicional -->
-                <div class="gallery-item" data-category="acuarela" data-index="15">
-                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/puente1.jpg" alt="Paisaje costero en acuarela" loading="lazy">
+                <!-- Obra 17: sendero floral.jpeg -->
+                <div class="gallery-item" data-category="paisaje" data-index="17">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/sendero%20floral.jpeg" alt="Sendero con flores" loading="lazy">
                     <div class="gallery-info">
-                        <span class="gallery-category">Acuarelas</span>
-                        <h3 class="gallery-title">Costa al Atardecer</h3>
-                        <p class="gallery-details">Acuarela sobre papel • 60x80 cm • 2024</p>
-                        <div class="gallery-price">$420.000</div>
+                        <span class="gallery-category">Paisaje</span>
+                        <h3 class="gallery-title">Sendero Floral</h3>
+                        <p class="gallery-details">Óleo sobre lienzo • 80x100 cm • 2024</p>
+                        <div class="gallery-price">$620.000</div>
+                    </div>
+                </div>
+                <!-- Obra 18: viajebote.jpeg -->
+                <div class="gallery-item" data-category="marina" data-index="18">
+                    <img src="https://carloscisternasp.github.io/arteclaudiadalbora.cl/images/viajebote.jpeg" alt="Viaje en bote" loading="lazy">
+                    <div class="gallery-info">
+                        <span class="gallery-category">Marinas</span>
+                        <h3 class="gallery-title">Viaje en Bote</h3>
+                        <p class="gallery-details">Acuarela sobre papel • 50x65 cm • 2023</p>
+                        <div class="gallery-price">$350.000</div>
                     </div>
                 </div>
             </div>
@@ -684,7 +714,7 @@
     </div>
 
     <!-- Collections Section -->
-    <section class="section" id="collections" style="background-color: #f9f7f2;">
+    <section class="section" id="collections" style="background-color: #f5f5f5;">
         <div class="container">
             <h2 class="section-title">Series Impresionistas</h2>
             <p class="section-subtitle">Explora las colecciones temáticas donde Claudia D'Albora profundiza en diferentes aspectos de la luz y el paisaje.</p>
@@ -693,18 +723,24 @@
                     <div class="collection-icon"><i class="fas fa-mountain-sun"></i></div>
                     <h3>Paisajes al Óleo</h3>
                     <p>Estudio de la luz cambiante en montañas, valles y costas, trabajado directamente al aire libre (plein air).</p>
-                    <p><strong>8 obras</strong></p>
+                    <p><strong>6 obras</strong></p>
                 </div>
                 <div class="collection-card">
                     <div class="collection-icon"><i class="fas fa-home"></i></div>
                     <h3>Casas con Alma</h3>
                     <p>La arquitectura integrada en la naturaleza, donde la luz define el carácter y calidez de cada morada.</p>
-                    <p><strong>5 obras</strong></p>
+                    <p><strong>4 obras</strong></p>
                 </div>
                 <div class="collection-card">
                     <div class="collection-icon"><i class="fas fa-water"></i></div>
-                    <h3>Acuarelas de Viaje</h3>
-                    <p>Obras espontáneas creadas durante viajes, capturando la esencia inmediata de un lugar con transparencias y fluidez.</p>
+                    <h3>Marinas</h3>
+                    <p>La fuerza del mar y la calma de la costa capturadas en diferentes momentos del día y condiciones de luz.</p>
+                    <p><strong>6 obras</strong></p>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-icon"><i class="fas fa-star"></i></div>
+                    <h3>Obras Destacadas</h3>
+                    <p>Selección especial de obras premiadas y piezas representativas de la evolución artística.</p>
                     <p><strong>3 obras</strong></p>
                 </div>
             </div>
@@ -721,16 +757,16 @@
                         <p><strong>Pintora impresionista contemporánea</strong> cuya obra se centra en la interpretación emotiva del paisaje. Inspirada por los maestros del siglo XIX como Monet y Pissarro, desarrolla su trabajo principalmente <em>en plein air</em> para capturar la verdadera esencia de la luz.</p>
                         <p>Su técnica se caracteriza por el uso de colores puros, pinceladas visibles y texturas que invitan al espectador a completar la escena. Reside entre Chile y Francia, donde encuentra continua inspiración en la diversidad de los paisajes.</p>
                         <ul class="artist-highlights">
-                            <li><i class="fas fa-graduation-cap"></i> Maestría en Artes Visuales, Universidad de Chile.</li>
-                            <li><i class="fas fa-award"></i> Premio "Mejor Obra Impresionista", Salón Nacional 2022.</li>
-                            <li><i class="fas fa-globe-europe"></i> Exposiciones en Santiago, París y Buenos Aires.</li>
-                            <li><i class="fas fa-users"></i> Obras en colecciones privadas en Europa y América.</li>
+                            <li><i class="fas fa-graduation-cap"></i> Maestría en Artes Visuales, Bellas Artes.</li>
+                            <li><i class="fas fa-award"></i> Premio "Mejor Obra Impresionista", Exposición Salón Reñaca - Viña del Mar.</li>
+                            <li><i class="fas fa-globe-europe"></i> Exposiciones en Santiago, Viña del Mar y en Latino América.</li>
+                            <li><i class="fas fa-users"></i> Obras en colecciones privadas premium elite.</li>
                         </ul>
                         <a href="#contact" class="btn btn-primary">Contactar a la Artista</a>
                     </div>
                     <div>
                         <!-- Espacio para una foto de la artista -->
-                        <div style="background: #e6dfd1; border-radius: var(--border-radius); height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+                        <div style="background: #e0e0e0; border-radius: var(--border-radius); height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; color: var(--medium-gray);">
                             <div style="text-align: center; padding: 2rem;">
                                 <i class="fas fa-user" style="font-size: 4rem; margin-bottom: 1rem;"></i>
                                 <p>Foto de Claudia D'Albora<br><small>(Reemplazar con imagen real)</small></p>
@@ -758,7 +794,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Galería D'Albora</h3>
+                    <h3>Galería Arte Claudia D'Albora</h3>
                     <p>Especializados en la promoción y venta de pintura impresionista contemporánea, con foco en paisajes y escenas de luz natural.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-instagram"></i></a>
